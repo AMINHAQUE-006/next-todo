@@ -30,7 +30,7 @@ const styles = {
   } as React.CSSProperties,
 };
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// ─── Types
 interface RegisterFormState {
   name: string;
   email: string;
@@ -38,7 +38,7 @@ interface RegisterFormState {
   confirmPassword: string;
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
+// ─── RegisterPage 
 export default function RegisterPage() {
   const router = useRouter();
   const dispatch = useAppDispatch();
@@ -59,6 +59,7 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // FORM VALIDATION --- checking only for filled filelds, password matching, password length, NOTE: not validation email
     if (!formData.name || !formData.email || !formData.password) {
       setError('Please fill in all fields');
       return;
@@ -73,7 +74,7 @@ export default function RegisterPage() {
     }
     try {
       setIsLoading(true);
-      // MOCK — replace with: await register(formData).unwrap()
+      // TODO: REPLACE BELOW CODE WITH REAL API CALL
       await new Promise((resolve) => setTimeout(resolve, 1000));
       dispatch(setCredentials({ user: { id: '1', name: formData.name, email: formData.email }, token: 'mock-jwt-token' }));
       router.push('/dashboard');

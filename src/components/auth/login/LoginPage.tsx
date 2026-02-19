@@ -62,13 +62,14 @@ export default function LoginPage() {
   // --- Login handle
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // VALIDATION - NOTE: Only checking for both filed filled or not, not validation email or password length
     if (!formData.email || !formData.password) {
       setError('Please fill in all fields');
       return;
     }
     try {
       setIsLoading(true);
-      // MOCK — replace with: const result = await login(formData).unwrap();
+      // TODO: REPLACE BELOW CODE WITH REAL API CALL
       await new Promise((resolve) => setTimeout(resolve, 1000));
       dispatch(setCredentials({ user: { id: '1', name: 'USER-001', email: formData.email }, token: 'USE-SECRTER-KEY-LATER' }));
       router.push('/dashboard');
