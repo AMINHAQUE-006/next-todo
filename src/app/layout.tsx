@@ -7,8 +7,8 @@
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ReduxProvider } from '@/components/layouts/ReduxProvider';
-import { MuiThemeProvider } from '@/components/layouts/MuiThemeProvider';
+import { ReduxProvider } from '@/providers/ReduxProvider';
+import { MuiThemeProvider } from '@/providers/MuiThemeProvider';
 
 // Next.js font optimization - loads Inter font with zero layout shift
 const inter = Inter({
