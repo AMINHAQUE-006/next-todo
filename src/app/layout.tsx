@@ -6,12 +6,12 @@ import { MuiThemeProvider } from '@/providers/MuiThemeProvider';
 
 const inter = Inter({
   subsets: ['latin'],
-  display: 'swap', // Shows fallback font while loading, then swaps
+  display: 'swap', 
 });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | MyApp', // Individual pages set their own title, this wraps it
+    template: '%s | MyApp', 
     default: 'MyApp',
   },
   description: 'A production-ready Next.js application',
@@ -24,10 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/*
-        suppressHydrationWarning on body prevents warning when theme class is added
-        by browser extensions (like dark mode extensions)
-      */}
       <body className={inter.className} suppressHydrationWarning>
         {/* Redux must wrap MuiThemeProvider because MuiThemeProvider reads from Redux */}
         <ReduxProvider>
