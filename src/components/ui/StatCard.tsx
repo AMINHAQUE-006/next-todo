@@ -1,12 +1,3 @@
-// src/components/ui/StatCard.tsx
-//
-// Dashboard stat card showing a metric label, value, and change badge.
-// Could be reused in any analytics/reporting section.
-//
-// Usage:
-//   <StatCard label="Total Users" value="12,430" change="+12%" />
-//   <StatCard label="Revenue" value="$84,201" change="+8.2%" changeColor="success.main" />
-
 import Typography from '@mui/material/Typography';
 import type { SxProps, Theme } from '@mui/material/styles';
 import { AppCard } from './AppCard';

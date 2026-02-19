@@ -1,6 +1,3 @@
-// src/components/ui/LoadingSpinner.tsx
-// Reusable loading component used as Suspense fallback and general loading states.
-// Always build reusable UI components instead of repeating the same MUI code.
 
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';

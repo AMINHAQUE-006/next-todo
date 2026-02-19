@@ -1,16 +1,3 @@
-// src/components/forms/AuthFormWrapper.tsx
-//
-// All auth pages (login, register, forgot-password) share the same structure:
-//   - A card with a title, subtitle, optional error alert, and children (the form)
-//
-// Instead of repeating that in every page, we extract it here.
-// Each auth page just passes its title, subtitle, and form as children.
-//
-// Usage:
-//   <AuthFormWrapper title="Welcome back" subtitle="Sign in to continue">
-//     <form>...</form>
-//   </AuthFormWrapper>
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';

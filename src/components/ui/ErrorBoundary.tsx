@@ -1,11 +1,4 @@
-// src/components/ui/ErrorBoundary.tsx
-// Error Boundaries catch JavaScript errors anywhere in the child component tree.
-// They must be CLASS components (React limitation - hooks can't catch errors yet).
-//
-// Usage:
-//   <ErrorBoundary>
-//     <SomeComponentThatMightCrash />
-//   </ErrorBoundary>
+
 
 'use client';
 
@@ -17,7 +10,7 @@ import Paper from '@mui/material/Paper';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode; // Optional custom fallback UI
+  fallback?: ReactNode; 
 }
 
 interface State {
@@ -31,15 +24,13 @@ export class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false, error: null };
   }
 
-  // Called when a descendant component throws an error
-  // Return the new state (show fallback UI)
+  
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  // Called after the error is captured - good for logging
+  
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // In production, send to error tracking like Sentry
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 

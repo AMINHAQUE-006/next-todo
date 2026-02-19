@@ -1,14 +1,3 @@
-// src/components/ui/AppCard.tsx
-//
-// Standardized card wrapper used throughout the app.
-// Every card has the same border, shadow, and padding style.
-// If the design changes (e.g. rounder corners, stronger border) — fix once here.
-//
-// Usage:
-//   <AppCard>...</AppCard>
-//   <AppCard noPadding>...</AppCard>         — for cards with custom internal layout
-//   <AppCard sx={{ mt: 3 }}>...</AppCard>    — extend with extra sx
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import type { SxProps, Theme } from '@mui/material/styles';
@@ -23,16 +12,14 @@ const styles = {
 
   content: {
     p: 4,
-    // MUI applies &:last-child { pb: 16px } which overrides our padding.
-    // Override it back to keep consistent padding at the bottom too.
     '&:last-child': { pb: 4 },
   } satisfies SxProps<Theme>,
 };
 
 interface AppCardProps {
   children: React.ReactNode;
-  noPadding?: boolean; // Skip CardContent wrapper (for custom internal layouts)
-  sx?: SxProps<Theme>; // Extra styles from parent
+  noPadding?: boolean; 
+  sx?: SxProps<Theme>; 
 }
 
 export function AppCard({ children, noPadding = false, sx }: AppCardProps) {

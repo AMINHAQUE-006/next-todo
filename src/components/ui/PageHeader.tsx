@@ -1,13 +1,3 @@
-// src/components/ui/PageHeader.tsx
-//
-// Every protected page has a title + optional subtitle at the top.
-// Instead of repeating the same two <Typography> tags in every page,
-// we extract it into a component.
-//
-// Usage:
-//   <PageHeader title="Dashboard" subtitle="Here's what's happening." />
-//   <PageHeader title="My Profile" />
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import type { SxProps, Theme } from '@mui/material/styles';
