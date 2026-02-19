@@ -5,15 +5,14 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
 import Skeleton from '@mui/material/Skeleton';
-import Alert from '@mui/material/Alert';
 import EditIcon from '@mui/icons-material/Edit';
 import type { SxProps, Theme } from '@mui/material/styles';
 import { AppButton, AppCard, PageHeader } from '@/components/ui';
 import { useAppSelector } from '@/hooks/redux';
 import { selectCurrentUser } from '@/store/slices/authSlice';
 import { getInitials } from '@/utils';
+import DetailField from './DetailField';
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
 const styles = {
   profileHeader: {
     display: 'flex',
@@ -56,46 +55,11 @@ const styles = {
     gap: 3,
   } satisfies SxProps<Theme>,
 
-  detailLabel: {
-    fontWeight: 600,
-    color: 'text.secondary',
-    textTransform: 'uppercase',
-    letterSpacing: '0.05em',
-    fontSize: '0.7rem',
-    display: 'block',
-    mb: 0.5,
-  } satisfies SxProps<Theme>,
-
-  detailValue: {
-    // inherits Typography body1 defaults
-  } satisfies SxProps<Theme>,
-
-  monoValue: {
-    fontFamily: 'monospace',
-  } satisfies SxProps<Theme>,
-
-  devAlert: {
-    mt: 3,
-  } satisfies SxProps<Theme>,
-
   loadingSkeleton: {
     borderRadius: 3,
   } satisfies SxProps<Theme>,
 };
 
-// ─── User card
-function DetailField({ label, value, mono = false }: { label: string; value: string; mono?: boolean }) {
-  return (
-    <Box>
-      <Typography variant="caption" sx={styles.detailLabel}>
-        {label}
-      </Typography>
-      <Typography variant="body1" sx={mono ? styles.monoValue : styles.detailValue}>
-        {value}
-      </Typography>
-    </Box>
-  );
-}
 
 // ─── ProfilePage
 export default function ProfilePage() {
