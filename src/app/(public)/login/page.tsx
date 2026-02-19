@@ -1,4 +1,4 @@
-import LoginPage from "@/components/login/LoginPage";
+import LoginPage from "@/components/auth/login/LoginPage";
 import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
