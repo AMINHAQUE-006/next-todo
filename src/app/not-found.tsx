@@ -40,15 +40,11 @@ export default function NotFoundPage() {
       <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 400 }}>
         The page you&apos;re looking for doesn&apos;t exist or has been moved.
       </Typography>
-      <Button
-        component={Link}
-        href="/"
-        variant="contained"
-        size="large"
-        sx={{ mt: 2 }}
-      >
+      <Link href="/" passHref style={{ textDecoration: 'none', marginTop: '16px' }}>
+      <Button variant="contained" size="large">
         Back to home
       </Button>
+    </Link>
     </Box>
   );
 }

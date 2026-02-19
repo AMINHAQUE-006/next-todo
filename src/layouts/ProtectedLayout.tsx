@@ -100,10 +100,12 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
         <List sx={styles.drawerNav}>
           {NAV_LINKS.map((link) => (
             <ListItem key={link.href} disablePadding sx={styles.navListItem}>
-              <ListItemButton component={Link} href={link.href} sx={styles.navListItemButton}>
-                <ListItemIcon sx={styles.navListItemIcon}>{link.icon}</ListItemIcon>
-                <ListItemText primary={link.label} />
-              </ListItemButton>
+              <Link href={link.href} style={{ textDecoration: 'none', width: '100%', color: 'inherit' }}>
+                <ListItemButton sx={styles.navListItemButton}>
+                  <ListItemIcon sx={styles.navListItemIcon}>{link.icon}</ListItemIcon>
+                  <ListItemText primary={link.label} />
+                </ListItemButton>
+              </Link>
             </ListItem>
           ))}
         </List>

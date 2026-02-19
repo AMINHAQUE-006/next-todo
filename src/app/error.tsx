@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Link from 'next/link';
 
 interface ErrorProps {
   error: Error & { digest?: string }; // digest is a Next.js-specific hash for the error
@@ -60,9 +61,9 @@ export default function GlobalError({ error, reset }: ErrorProps) {
         <Button variant="contained" onClick={reset}>
           Try again
         </Button>
-        <Button variant="outlined" onClick={() => router.push('/')}>
-          Go home
-        </Button>
+        <Link href="/" style={{ textDecoration: 'none' }}>
+          <Button variant="contained">Go home</Button>
+        </Link>
       </Stack>
     </Box>
   );
