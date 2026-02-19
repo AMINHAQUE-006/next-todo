@@ -1,11 +1,7 @@
-// src/lib/theme.ts
-// This file defines your MUI theme for both light and dark modes.
-// Centralizing theme here keeps all design tokens in one place.
-
-import { createTheme, type PaletteMode } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 // Helper to generate theme based on mode
-export const createAppTheme = (mode: PaletteMode) =>
+export const createAppTheme = (mode: any) =>
   createTheme({
     palette: {
       mode,

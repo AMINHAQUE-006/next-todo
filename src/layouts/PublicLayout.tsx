@@ -1,7 +1,3 @@
-// src/layouts/PublicLayout.tsx
-// Layout shared by all PUBLIC routes: /login, /register, /forgot-password
-// Refactored: sx values live in publicLayoutStyles, not inline here.
-
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';

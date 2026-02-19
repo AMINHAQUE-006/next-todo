@@ -1,28 +1,10 @@
-// src/styles/commonStyles.ts
-//
-// ─────────────────────────────────────────────────────────────────────────────
-//  WHY THIS FILE EXISTS
-// ─────────────────────────────────────────────────────────────────────────────
-//  Instead of writing inline sx={{ display:'flex', alignItems:'center', gap:2 }}
-//  scattered across dozens of components, we define named style OBJECTS here.
-//
-//  Then in your component you just write:
-//    <Box sx={commonStyles.flexCenter}>...</Box>
-//    <Box sx={commonStyles.pageContainer}>...</Box>
-//
-//  Benefits:
-//    ✅ No repetition — change once, updates everywhere
-//    ✅ Named styles are self-documenting (flexCenter vs a bag of raw props)
-//    ✅ TypeScript knows the type of every style object (SxProps<Theme>)
-//    ✅ Easy to compose: sx={{ ...commonStyles.flexCenter, gap: 4 }}
-// ─────────────────────────────────────────────────────────────────────────────
+
 
 import type { SxProps, Theme } from '@mui/material/styles';
 
-// Shorthand type alias so every style object below reads cleanly
 type Sx = SxProps<Theme>;
 
-// ─── Layout Helpers ───────────────────────────────────────────────────────────
+// ─── Layout Helpers
 
 export const commonStyles = {
   // Horizontal center + vertical center
@@ -139,7 +121,7 @@ export const commonStyles = {
     minWidth: 40,
   } satisfies Sx,
 
-  // ─── Profile / User Styles ───────────────────────────────────────────────
+  // ─── Profile / User Styles 
 
   profileHeader: {
     display: 'flex',
@@ -162,7 +144,7 @@ export const commonStyles = {
     gap: 3,
   } satisfies Sx,
 
-  // ─── Misc ────────────────────────────────────────────────────────────────
+  // ─── Misc 
 
   // Right-aligned link row (e.g. "Forgot password?" row in login form)
   forgotPasswordRow: {

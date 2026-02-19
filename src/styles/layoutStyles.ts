@@ -1,8 +1,4 @@
-// src/styles/layoutStyles.ts
-//
-// Style objects scoped to layout components (AppBar, Drawer, PublicLayout).
-// Keeping layout styles separate from commonStyles avoids one giant file
-// and makes it obvious WHERE a style is used.
+
 
 import type { SxProps, Theme } from '@mui/material/styles';
 
@@ -10,7 +6,7 @@ type Sx = SxProps<Theme>;
 
 export const DRAWER_WIDTH = 240; // single source of truth for sidebar width
 
-// ─── Protected Layout (Sidebar + AppBar) ─────────────────────────────────────
+// ─── Protected Layout (Sidebar + AppBar) 
 
 export const protectedLayoutStyles = {
   root: {
@@ -83,7 +79,7 @@ export const protectedLayoutStyles = {
   } satisfies Sx,
 } as const;
 
-// ─── Public Layout (Login / Register / Forgot Password) ───────────────────────
+// ─── Public Layout (Login / Register / Forgot Password) 
 
 export const publicLayoutStyles = {
   root: {

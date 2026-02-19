@@ -1,11 +1,3 @@
-// src/hooks/redux.ts
-// Always use these typed hooks instead of plain useDispatch and useSelector.
-// They are pre-typed with your store's RootState and AppDispatch,
-// so you get full TypeScript autocomplete and type safety.
-//
-// Usage:
-//   const dispatch = useAppDispatch()
-//   const user = useAppSelector(selectCurrentUser)
 
 import { useDispatch, useSelector } from 'react-redux';
 import type { AppDispatch, RootState } from '@/store';

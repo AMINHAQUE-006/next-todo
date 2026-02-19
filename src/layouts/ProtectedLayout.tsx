@@ -54,7 +54,7 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
   const isAuthenticated = useAppSelector(selectIsAuthenticated);
   const { logout } = useAuth();
 
-  // Route Guard — redirect unauthenticated users to /login
+  
   useEffect(() => {
     if (!isAuthenticated) {
       router.replace('/login');
@@ -65,7 +65,6 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
 
   return (
     <Box sx={styles.root}>
-      {/* ── Top AppBar ─────────────────────────────────────────────────────── */}
       <AppBar position="fixed" elevation={0} sx={styles.appBar(sidebarOpen)}>
         <Toolbar sx={styles.toolbar}>
           <IconButton
@@ -91,7 +90,6 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
         </Toolbar>
       </AppBar>
 
-      {/* ── Sidebar Drawer ─────────────────────────────────────────────────── */}
       <Drawer variant="persistent" open={sidebarOpen} sx={styles.drawer}>
         <Box sx={styles.drawerLogo}>
           <Typography variant="h6" fontWeight={800} color="primary">
@@ -111,7 +109,6 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
         </List>
       </Drawer>
 
-      {/* ── Main Content ───────────────────────────────────────────────────── */}
       <Box component="main" sx={styles.main}>
         {children}
       </Box>

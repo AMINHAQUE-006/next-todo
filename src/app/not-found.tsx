@@ -1,7 +1,3 @@
-// src/app/not-found.tsx
-// Custom 404 page. Next.js automatically uses this when no route matches.
-// This is a SERVER component (default) - no 'use client' needed.
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';

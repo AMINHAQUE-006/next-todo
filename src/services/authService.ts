@@ -1,6 +1,3 @@
-// src/services/authService.ts
-// Authentication API calls via RTK Query
-
 import { apiSlice } from '@/store/api/apiSlice';
 import { setCredentials } from '@/store/slices/authSlice';
 
@@ -32,8 +29,6 @@ export const authApiSlice = apiSlice.injectEndpoints({
         method: 'POST',
         body: credentials,
       }),
-      // onQueryStarted is a lifecycle callback that runs after a successful mutation
-      // Here we use it to dispatch setCredentials to store the token in Redux
       async onQueryStarted(_args, { dispatch, queryFulfilled }) {
         try {
           const { data } = await queryFulfilled;

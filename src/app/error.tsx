@@ -1,12 +1,3 @@
-// src/app/error.tsx
-// App Router's built-in error boundary at the route level.
-// This file is AUTOMATICALLY used by Next.js when a page crashes.
-// It MUST be a client component.
-//
-// Different from ErrorBoundary component:
-//   - error.tsx → catches errors from entire page route
-//   - ErrorBoundary component → wraps specific sections within a page
-
 'use client';
 
 import { useEffect } from 'react';
@@ -25,7 +16,6 @@ export default function GlobalError({ error, reset }: ErrorProps) {
   const router = useRouter();
 
   useEffect(() => {
-    // Log to error tracking service (e.g., Sentry)
     console.error('Page error:', error);
   }, [error]);
 

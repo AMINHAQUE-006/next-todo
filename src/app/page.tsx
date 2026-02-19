@@ -1,8 +1,3 @@
-// src/app/page.tsx
-// The root page at URL "/"
-// Redirects to dashboard (authenticated users) or login (unauthenticated)
-// Using a simple redirect component keeps root page logic clean.
-
 'use client';
 
 import { useEffect } from 'react';
@@ -23,6 +18,5 @@ export default function RootPage() {
     }
   }, [isAuthenticated, router]);
 
-  // Show spinner while redirecting
   return <LoadingSpinner fullHeight message="Loading..." />;
 }
