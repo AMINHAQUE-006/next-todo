@@ -83,7 +83,7 @@ const styles = {
   } satisfies SxProps<Theme>,
 };
 
-// ─── Sub-component: one row in the profile details grid ──────────────────────
+// ─── User card
 function DetailField({ label, value, mono = false }: { label: string; value: string; mono?: boolean }) {
   return (
     <Box>
@@ -97,7 +97,7 @@ function DetailField({ label, value, mono = false }: { label: string; value: str
   );
 }
 
-// ─── ProfilePage ─────────────────────────────────────────────────────────────────────
+// ─── ProfilePage
 export default function ProfilePage() {
   const user = useAppSelector(selectCurrentUser);
 
