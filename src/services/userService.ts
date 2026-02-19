@@ -32,5 +32,4 @@ export const userApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-// These hooks are auto-generated! Use them in components directly
 export const { useGetProfileQuery, useUpdateProfileMutation } = userApiSlice;

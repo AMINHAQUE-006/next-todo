@@ -1,6 +1,4 @@
-// src/store/slices/uiSlice.ts
-// Manages global UI state like color mode (light/dark) and sidebar open/closed.
-// Storing these in Redux means they persist across page navigations within the session.
+
 
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { PaletteMode } from '@mui/material';

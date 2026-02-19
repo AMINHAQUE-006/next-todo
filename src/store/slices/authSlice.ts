@@ -1,6 +1,4 @@
-// src/store/slices/authSlice.ts
-// A "slice" in Redux Toolkit = reducer + actions + selectors all in one file.
-// This slice manages authentication state across the entire app.
+
 
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../index';
@@ -45,11 +43,10 @@ const authSlice = createSlice({
   },
 });
 
-// Export actions - these are called in components with dispatch(setCredentials(...))
+
 export const { setCredentials, logout } = authSlice.actions;
 
-// Selectors - reusable functions to read from state
-// Usage in components: const user = useAppSelector(selectCurrentUser)
+
 export const selectCurrentUser = (state: RootState) => state.auth.user;
 export const selectIsAuthenticated = (state: RootState) => state.auth.isAuthenticated;
 export const selectToken = (state: RootState) => state.auth.token;

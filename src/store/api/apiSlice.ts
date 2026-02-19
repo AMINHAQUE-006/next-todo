@@ -1,7 +1,3 @@
-// src/store/api/apiSlice.ts
-// RTK Query - This is the "base" API slice that all your API calls extend from.
-// RTK Query auto-generates hooks like useGetUserQuery, useLoginMutation etc.
-// This eliminates the need to write separate thunks for every API call!
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { RootState } from '../index';
